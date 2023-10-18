@@ -1,0 +1,41 @@
+// Ejercicio: Programar una calculadora de interes compuesto
+// Ejemplo de uso
+// Dinero Actual:	$500.00
+// Dinero que se agrega Anualmente:	$1,000.00
+// Cantidad de anios a invertir:	 	30
+// Interes anual:     10
+// Resultado:            $189,668.13
+#include <stdio.h>
+int main() {
+    double dineract,adicionan,interesanual=0;
+    int años=0;
+    int i;
+    printf("ingresa dinero actual: ");
+    scanf("%lf",&dineract);
+
+    printf("ingresa dinero a invertir: ");
+    scanf("%lf",&adicionan);
+
+    printf("ingresa cuantos años invertiras: ");
+    scanf("%d",&años);
+
+
+    printf("ingresa el porcentaje de interes anual: ");
+    scanf("%lf",&interesanual);
+
+    double total=dineract;
+    for( i = 0;i<años;i++){
+
+        total+=1000;//total=total+1000
+        total=total + (interesanual * total / 100);
+        printf("este es tu total:%.2lf",total);
+
+
+    }
+
+
+
+    
+
+    return 0;
+}
